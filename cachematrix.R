@@ -11,7 +11,7 @@
 ## to cache the computed inverse with the 'x' object created by makeCacheMatrix.
 
 makeCacheMatrix <- function(x = matrix()) {
- 	  inverse <- NULL			# NULL is the default value for the inverse until an inverse is computed
+ 	inverse <- NULL			# NULL is the default value for the inverse until an inverse is computed
         set <- function(y) {
                 x <<- y
                 inverse <<- NULL
@@ -32,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         
-	  inv <- x$getinverse()
+	inv <- x$getinverse()
         if(!is.null(inv)) {				# inverse has already been computed
                 message("getting cached data")
                 return(inv)
